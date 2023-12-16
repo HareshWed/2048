@@ -18,10 +18,45 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #FBEAEB;
+}
+
+.tile-grid{
+  transform: translate(75%, 15%);
+  width: 40vw;
+}
+.num-tile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  width: 8vw;
+  height: 8vw;
+}
+
+.game-over, .game-active, .game-win{
+  position: absolute;
+  font-weight: bold;
+  font-size: 4em;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+.game-over{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(180 , 70, 50, 0.4);
+}
+
+.game-win{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(240 , 220, 50, 0.5);
+}
+
+.game-active{
+  display: none;
 }
